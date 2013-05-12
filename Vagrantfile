@@ -11,6 +11,9 @@ ram = '256'
 
 # provision script
 $script = <<SCRIPT
+sudo apt-get update
+sudo apt-get install -y git
+sudo apt-get install -y python-pip
 echo 'installing tweepy'
 cd /tmp
 git clone https://github.com/tweepy/tweepy.git

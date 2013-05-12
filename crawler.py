@@ -20,7 +20,9 @@ class MyRotatingHandler(logging.handlers.RotatingFileHandler):
     this creates a new directory for each day. otherwise it
     will just rotate on size of file
     """
-    pass
+    def doRollover(self):
+        print 'rollover'
+        super(MyRotatingHandler, self).doRollover()
 
 class StdOutListener(StreamListener):
     """ 
